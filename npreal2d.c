@@ -580,7 +580,7 @@ char *	cmdpath;
 // Scott: 2005-10-03
 // The original design will lead to an incorrect workpath.
 // Use fixed path instead.
-    sprintf(workpath, "/usr/lib/npreal2/driver");
+    sprintf(workpath, "/opt/moxa/npreal2");
 
     /*
      * Prepare the full-path file names of LOG/Configuration.
@@ -1736,14 +1736,14 @@ printf("end\n");
 #if 1
 		sprintf(tmp_cmd, "rm -rf /dev/%s", ttys_info[i].ttyname2);
 		system(tmp_cmd);
-		sprintf(tmp_cmd, "/usr/lib/npreal2/driver/mxmknod %s 33 %s", 
+		sprintf(tmp_cmd, "/opt/moxa/npreal2/mxmknod %s 33 %s", 
 						ttys_info[i].ttyname2, ttys_info[i].ttyname);
 //		sprintf(tmp_cmd, "mknod -Z system_u:object_r:tty_device_t:s0 -m 666 /dev/%s c 33 %s", 
 //						 &ttys_info[i].ttyname2, &ttys_info[i].ttyname);
 		system(tmp_cmd);
 		sprintf(tmp_cmd, "rm -rf /dev/%s", ttys_info[i].curname);
 		system(tmp_cmd);
-		sprintf(tmp_cmd, "/usr/lib/npreal2/driver/mxmknod %s 38 %s", 
+		sprintf(tmp_cmd, "/opt/moxa/npreal2/mxmknod %s 38 %s", 
 						ttys_info[i].curname, ttys_info[i].ttyname);
 //		sprintf(tmp_cmd, "mknod -Z system_u:object_r:tty_device_t:s0 -m 666 /dev/%s c 33 %s", 
 //						 &ttys_info[i].curname, &ttys_info[i].ttyname);

@@ -15,8 +15,8 @@
 #define     MAX_DEVICE_NUM        10
 
 #define     TEMPDIR     "/tmp/moxa"
-#define     NPPATH      "/usr/lib/npreal2"
-#define     DRIVERPATH  "/usr/lib/npreal2/driver"
+#define     NPPATH      "/opt/moxa/npreal2"
+#define     DRIVERPATH  "/opt/moxa/npreal2"
 
 
 #define		NP5210          0x0322

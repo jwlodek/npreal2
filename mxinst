@@ -42,7 +42,7 @@ DirTmp=$0
 DirTmp=${DirTmp%/mxinst}
 TempDir=$DirTmp
 
-NPPATH="/usr/lib/npreal2"
+NPPATH="/opt/moxa/npreal2"
 ProductName="MOXA NPort Server Real TTY Driver"
 ProductVer=""
 OS="linux"
@@ -50,7 +50,7 @@ Device=""
 check=""
 EntryPwd=`pwd`
 
-driverPath="/usr/lib/npreal2/driver"
+driverPath="/opt/moxa/npreal2"
 MX_MOD=npreal2
 
 
@@ -227,7 +227,7 @@ trap interrupt_nothing2 2           # trap signal SIGINT
 ########################################################
 # check configuration file. (npreal2d.cf)
 ########################################################
-if [ -f /usr/lib/npreal2/driver/npreal2d.cf ]
+if [ -f /opt/moxa/npreal2/npreal2d.cf ]
 then
     echo 'There is an Real TTY Driver installed in your system.'
     echo 'Continue to install will overwrite the old driver.'
@@ -390,7 +390,7 @@ mkdir -p $NPPATH > /dev/null 2>&1
 mkdir -p $driverPath > /dev/null 2>&1
 
 
-[ -f /usr/lib/npreal2/driver/npreal2d.cf ] || {
+[ -f /opt/moxa/npreal2/npreal2d.cf ] || {
     echo -n "Copying configurations files ... "
     cp -f $(pwd)/npreal2d.cf $driverPath
 
